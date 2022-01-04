@@ -59,11 +59,16 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
+    margin-bottom: 60px;
+
+    /* fix movement after animation */
+    backface-visibility: hidden;
 }
 
 .heading-primary-main {
@@ -71,6 +76,15 @@ body {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+
+    /* apply animation */
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function:  ease-out;  
+
+    /* other animation properties:
+    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
+    */
 }
 
 .heading-primary-sub {
@@ -78,5 +92,67 @@ body {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px;
+
+    /* shorthand animation */
+    animation: moveInRight 1s ease-out;
 }
 
+/* h1 animation - .heading-primary-main */
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* h1 animation - heading-primary-sub */
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .15s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.btn-white {
+    background-color: #fff;
+    color:  #777;
+}
