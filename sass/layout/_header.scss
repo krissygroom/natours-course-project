@@ -10,6 +10,7 @@
     position: relative;
 
     /* specify 4 (tl, tr, br, bl) corners to clip diagonally */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     
     &__logo-box {
