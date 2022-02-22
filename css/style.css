@@ -506,8 +506,7 @@ body {
     border-top: 1px solid #777;
     padding-top: 2rem;
     width: 80%;
-    float: right;
-    display: inline-block; }
+    float: right; }
 
 .row {
   max-width: 114rem;
