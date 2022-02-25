@@ -2,18 +2,35 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    // defines what 1rem is
-    font-size: 62.5%;
+  // defines what 1rem is
+  font-size: 62.5%;
+
+  // Always put larger query before smaller
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(phone) {
+    font-size: 40%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
 }
 
 body {
-    /* white border around entire page */
-    padding: 3rem;
-    box-sizing: border-box;
+  /* white border around entire page */
+  padding: 3rem;
+  box-sizing: border-box;
 }
