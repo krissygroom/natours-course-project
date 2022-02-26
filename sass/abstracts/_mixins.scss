@@ -26,28 +26,13 @@ $breakpoints:
 - tab-port
 - tab-land
 - big-desktop
+
+ORDER OF QUERIES: 
+Base + typography > general layout + grid > page layout > components
 */
 
 // 1em = 16px
 @mixin respond($breakpoint) {
-  // @if $breakpoint == phone {
-  //   @media (max-width: 37.5em) {
-  //     // 600/16 = 37.5em
-  //     @content;
-  //   }
-  // }
-  // @if $breakpoint == tab-port {
-  //   @media (min-width: 37.5em) and (max-width: 56.25em) {
-  //     // 900px
-  //     @content;
-  //   }
-  // }
-  // @if $breakpoint == tab-land {
-  //   @media (min-width: 56.25em) and (max-width: 75em) {
-  //     // 1200px
-  //     @content;
-  //   }
-  // }
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {
       // 600/16 = 37.5em

@@ -21,7 +21,7 @@ html {
   }
 
   @include respond(phone) {
-    font-size: 40%;
+    font-size: 50%;
   }
 
   @include respond(big-desktop) {
@@ -33,4 +33,9 @@ body {
   /* white border around entire page */
   padding: 3rem;
   box-sizing: border-box;
+
+  @include respond(tab-port) {
+    font-size: 50%;
+    padding: 0;
+  }
 }
