@@ -952,7 +952,8 @@ body {
   margin-top: -20vh; }
   @media (max-width: 56.25em) {
     .section-about {
-      padding: 20rem 0; } }
+      padding: 20rem 0;
+      margin-top: -14vh; } }
 
 .section-features {
   padding: 20rem 0;
